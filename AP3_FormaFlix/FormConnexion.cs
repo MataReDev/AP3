@@ -11,9 +11,9 @@ using System.Windows.Forms;
 namespace AP3_FormaFlix
 {
     /// <summary>
-    /// AP3 FORMA'FLIX : connexion en tant qu'utilisateur
-    /// Auteur : C.AUTRET
-    /// date : Septembre 2021
+    /// AP3 FORMA'FLIX : Vue permettant de lister toutes les formations de la BD (avec leurs compétences associées)
+    /// Auteur : M.GOUDAL
+    /// date : MAI 2022
     /// </summary>
     public partial class FormConnexion : Corner
     {

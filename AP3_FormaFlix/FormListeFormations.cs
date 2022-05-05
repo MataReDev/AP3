@@ -5,8 +5,8 @@ namespace AP3_FormaFlix
 {
     /// <summary>
     /// AP3 FORMA'FLIX : Vue permettant de lister toutes les formations de la BD (avec leurs compétences associées)
-    /// Auteur : C.AUTRET
-    /// date : Septembre 2021
+    /// Auteur : M.GOUDAL
+    /// date : MAI 2022
     /// </summary>
     public partial class FormListeFormations : Corner
     {

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvFormations = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.listeDesCompétencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,20 +51,20 @@
             this.dgvFormations.BackgroundColor = System.Drawing.Color.White;
             this.dgvFormations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFormations.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFormations.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFormations.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFormations.Location = new System.Drawing.Point(39, 73);
             this.dgvFormations.MultiSelect = false;
             this.dgvFormations.Name = "dgvFormations";
             this.dgvFormations.ReadOnly = true;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvFormations.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvFormations.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvFormations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFormations.Size = new System.Drawing.Size(1316, 529);
             this.dgvFormations.TabIndex = 0;
@@ -100,7 +100,7 @@
             this.btnFermer.BackColor = System.Drawing.Color.Black;
             this.btnFermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFermer.ForeColor = System.Drawing.Color.White;
-            this.btnFermer.Location = new System.Drawing.Point(738, 625);
+            this.btnFermer.Location = new System.Drawing.Point(804, 628);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(98, 39);
             this.btnFermer.TabIndex = 2;
@@ -113,7 +113,7 @@
             this.btnsuppforma.BackColor = System.Drawing.Color.Black;
             this.btnsuppforma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsuppforma.ForeColor = System.Drawing.Color.White;
-            this.btnsuppforma.Location = new System.Drawing.Point(610, 625);
+            this.btnsuppforma.Location = new System.Drawing.Point(676, 628);
             this.btnsuppforma.Name = "btnsuppforma";
             this.btnsuppforma.Size = new System.Drawing.Size(113, 39);
             this.btnsuppforma.TabIndex = 8;
@@ -126,7 +126,7 @@
             this.btnModifForma.BackColor = System.Drawing.Color.Black;
             this.btnModifForma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModifForma.ForeColor = System.Drawing.Color.White;
-            this.btnModifForma.Location = new System.Drawing.Point(610, 625);
+            this.btnModifForma.Location = new System.Drawing.Point(676, 628);
             this.btnModifForma.Name = "btnModifForma";
             this.btnModifForma.Size = new System.Drawing.Size(113, 39);
             this.btnModifForma.TabIndex = 9;
@@ -140,7 +140,7 @@
             this.btn_modif_liste.BackColor = System.Drawing.Color.Black;
             this.btn_modif_liste.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modif_liste.ForeColor = System.Drawing.Color.White;
-            this.btn_modif_liste.Location = new System.Drawing.Point(481, 625);
+            this.btn_modif_liste.Location = new System.Drawing.Point(547, 628);
             this.btn_modif_liste.Name = "btn_modif_liste";
             this.btn_modif_liste.Size = new System.Drawing.Size(113, 39);
             this.btn_modif_liste.TabIndex = 10;
