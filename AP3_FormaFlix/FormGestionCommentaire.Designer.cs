@@ -43,11 +43,11 @@ namespace AP3_FormaFlix
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Bebas Neue", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(222, 22);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(314, 41);
+            this.label8.Size = new System.Drawing.Size(420, 39);
             this.label8.TabIndex = 19;
             this.label8.Text = "Gestion des commentaires";
             // 
@@ -67,11 +67,11 @@ namespace AP3_FormaFlix
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(237, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 23);
+            this.label1.Size = new System.Drawing.Size(97, 24);
             this.label1.TabIndex = 21;
             this.label1.Text = "AUTEUR :";
             this.label1.Visible = false;
@@ -79,19 +79,19 @@ namespace AP3_FormaFlix
             // lblAuteur
             // 
             this.lblAuteur.AutoSize = true;
-            this.lblAuteur.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAuteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAuteur.ForeColor = System.Drawing.Color.White;
             this.lblAuteur.Location = new System.Drawing.Point(317, 109);
             this.lblAuteur.Name = "lblAuteur";
-            this.lblAuteur.Size = new System.Drawing.Size(0, 23);
+            this.lblAuteur.Size = new System.Drawing.Size(0, 24);
             this.lblAuteur.TabIndex = 22;
             // 
             // btnValider
             // 
             this.btnValider.BackColor = System.Drawing.Color.Black;
-            this.btnValider.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValider.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValider.ForeColor = System.Drawing.Color.White;
-            this.btnValider.Location = new System.Drawing.Point(135, 472);
+            this.btnValider.Location = new System.Drawing.Point(136, 481);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(134, 47);
             this.btnValider.TabIndex = 23;
@@ -102,11 +102,11 @@ namespace AP3_FormaFlix
             // btnNePasValider
             // 
             this.btnNePasValider.BackColor = System.Drawing.Color.Black;
-            this.btnNePasValider.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNePasValider.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNePasValider.ForeColor = System.Drawing.Color.White;
             this.btnNePasValider.Location = new System.Drawing.Point(300, 472);
             this.btnNePasValider.Name = "btnNePasValider";
-            this.btnNePasValider.Size = new System.Drawing.Size(134, 47);
+            this.btnNePasValider.Size = new System.Drawing.Size(134, 65);
             this.btnNePasValider.TabIndex = 24;
             this.btnNePasValider.Text = "NE PAS VALIDER";
             this.btnNePasValider.UseVisualStyleBackColor = false;
@@ -115,9 +115,9 @@ namespace AP3_FormaFlix
             // btnFermer
             // 
             this.btnFermer.BackColor = System.Drawing.Color.Black;
-            this.btnFermer.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFermer.ForeColor = System.Drawing.Color.White;
-            this.btnFermer.Location = new System.Drawing.Point(464, 472);
+            this.btnFermer.Location = new System.Drawing.Point(465, 481);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(134, 47);
             this.btnFermer.TabIndex = 25;
@@ -128,11 +128,11 @@ namespace AP3_FormaFlix
             // lblRienATrraiter
             // 
             this.lblRienATrraiter.AutoSize = true;
-            this.lblRienATrraiter.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRienATrraiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRienATrraiter.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRienATrraiter.Location = new System.Drawing.Point(236, 282);
+            this.lblRienATrraiter.Location = new System.Drawing.Point(197, 291);
             this.lblRienATrraiter.Name = "lblRienATrraiter";
-            this.lblRienATrraiter.Size = new System.Drawing.Size(296, 25);
+            this.lblRienATrraiter.Size = new System.Drawing.Size(402, 25);
             this.lblRienATrraiter.TabIndex = 26;
             this.lblRienATrraiter.Text = "Vous n\'avez aucun commentaire à traiter";
             this.lblRienATrraiter.Visible = false;
@@ -140,13 +140,13 @@ namespace AP3_FormaFlix
             // btnListeComm
             // 
             this.btnListeComm.BackColor = System.Drawing.Color.Black;
-            this.btnListeComm.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListeComm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListeComm.ForeColor = System.Drawing.Color.White;
             this.btnListeComm.Location = new System.Drawing.Point(12, 12);
             this.btnListeComm.Name = "btnListeComm";
-            this.btnListeComm.Size = new System.Drawing.Size(115, 67);
+            this.btnListeComm.Size = new System.Drawing.Size(144, 81);
             this.btnListeComm.TabIndex = 27;
-            this.btnListeComm.Text = "liste des commentaires";
+            this.btnListeComm.Text = "Liste des commentaires";
             this.btnListeComm.UseVisualStyleBackColor = false;
             this.btnListeComm.Click += new System.EventHandler(this.btnListeComm_Click);
             // 

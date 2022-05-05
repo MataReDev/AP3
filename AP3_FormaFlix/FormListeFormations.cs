@@ -20,10 +20,16 @@ namespace AP3_FormaFlix
         {
             InitializeComponent();
             if (Maj == "modifier")
+            {
+                btn_modif_liste.Visible = false;
                 btnModifForma.Visible = true;
-            else
-                if (Maj == "supprimer")
-                    btnsuppforma.Visible = true;
+                btnsuppforma.Visible = false;
+            }
+            else if (Maj == "supprimer")
+            {
+                btn_modif_liste.Visible = false;
+                btnModifForma.Visible = false;
+            }
         }
 
         private void FormListeFormations_Load(object sender, EventArgs e)
@@ -98,6 +104,12 @@ namespace AP3_FormaFlix
         }
 
         private void btnModifForma_Click(object sender, EventArgs e)
+        {
+            FormModifFormation FM = new FormModifFormation(Convert.ToInt32(dgvFormations.CurrentRow.Index));
+            FM.Show();
+        }
+
+        private void btn_modif_liste_Click(object sender, EventArgs e)
         {
             FormModifFormation FM = new FormModifFormation(Convert.ToInt32(dgvFormations.CurrentRow.Index));
             FM.Show();

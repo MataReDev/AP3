@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvFormations = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.listeDesCompétencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,6 +38,7 @@
             this.btnFermer = new System.Windows.Forms.Button();
             this.btnsuppforma = new System.Windows.Forms.Button();
             this.btnModifForma = new System.Windows.Forms.Button();
+            this.btn_modif_liste = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormations)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,22 +51,22 @@
             this.dgvFormations.BackgroundColor = System.Drawing.Color.White;
             this.dgvFormations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFormations.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFormations.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvFormations.Location = new System.Drawing.Point(39, 48);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFormations.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvFormations.Location = new System.Drawing.Point(39, 73);
             this.dgvFormations.MultiSelect = false;
             this.dgvFormations.Name = "dgvFormations";
             this.dgvFormations.ReadOnly = true;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvFormations.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvFormations.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFormations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFormations.Size = new System.Drawing.Size(792, 192);
+            this.dgvFormations.Size = new System.Drawing.Size(1316, 529);
             this.dgvFormations.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -86,22 +87,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(35, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 23);
+            this.label1.Size = new System.Drawing.Size(203, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Liste des Formations";
             // 
             // btnFermer
             // 
             this.btnFermer.BackColor = System.Drawing.Color.Black;
-            this.btnFermer.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFermer.ForeColor = System.Drawing.Color.White;
-            this.btnFermer.Location = new System.Drawing.Point(450, 260);
+            this.btnFermer.Location = new System.Drawing.Point(738, 625);
             this.btnFermer.Name = "btnFermer";
-            this.btnFermer.Size = new System.Drawing.Size(82, 39);
+            this.btnFermer.Size = new System.Drawing.Size(98, 39);
             this.btnFermer.TabIndex = 2;
             this.btnFermer.Text = "FERMER";
             this.btnFermer.UseVisualStyleBackColor = false;
@@ -110,23 +111,22 @@
             // btnsuppforma
             // 
             this.btnsuppforma.BackColor = System.Drawing.Color.Black;
-            this.btnsuppforma.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsuppforma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsuppforma.ForeColor = System.Drawing.Color.White;
-            this.btnsuppforma.Location = new System.Drawing.Point(312, 260);
+            this.btnsuppforma.Location = new System.Drawing.Point(610, 625);
             this.btnsuppforma.Name = "btnsuppforma";
             this.btnsuppforma.Size = new System.Drawing.Size(113, 39);
             this.btnsuppforma.TabIndex = 8;
             this.btnsuppforma.Text = "SUPPRIMER";
             this.btnsuppforma.UseVisualStyleBackColor = false;
-            this.btnsuppforma.Visible = false;
             this.btnsuppforma.Click += new System.EventHandler(this.btnsuppforma_Click);
             // 
             // btnModifForma
             // 
             this.btnModifForma.BackColor = System.Drawing.Color.Black;
-            this.btnModifForma.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifForma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModifForma.ForeColor = System.Drawing.Color.White;
-            this.btnModifForma.Location = new System.Drawing.Point(312, 260);
+            this.btnModifForma.Location = new System.Drawing.Point(610, 625);
             this.btnModifForma.Name = "btnModifForma";
             this.btnModifForma.Size = new System.Drawing.Size(113, 39);
             this.btnModifForma.TabIndex = 9;
@@ -135,14 +135,28 @@
             this.btnModifForma.Visible = false;
             this.btnModifForma.Click += new System.EventHandler(this.btnModifForma_Click);
             // 
+            // btn_modif_liste
+            // 
+            this.btn_modif_liste.BackColor = System.Drawing.Color.Black;
+            this.btn_modif_liste.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modif_liste.ForeColor = System.Drawing.Color.White;
+            this.btn_modif_liste.Location = new System.Drawing.Point(481, 625);
+            this.btn_modif_liste.Name = "btn_modif_liste";
+            this.btn_modif_liste.Size = new System.Drawing.Size(113, 39);
+            this.btn_modif_liste.TabIndex = 10;
+            this.btn_modif_liste.Text = "MODIFIER";
+            this.btn_modif_liste.UseVisualStyleBackColor = false;
+            this.btn_modif_liste.Click += new System.EventHandler(this.btn_modif_liste_Click);
+            // 
             // FormListeFormations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(883, 311);
+            this.ClientSize = new System.Drawing.Size(1396, 735);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_modif_liste);
             this.Controls.Add(this.btnsuppforma);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.label1);
@@ -170,5 +184,6 @@
         private System.Windows.Forms.ToolStripMenuItem listeDesCompétencesToolStripMenuItem;
         private System.Windows.Forms.Button btnsuppforma;
         private System.Windows.Forms.Button btnModifForma;
+        private System.Windows.Forms.Button btn_modif_liste;
     }
 }

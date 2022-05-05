@@ -87,5 +87,11 @@ namespace AP3_FormaFlix
         {
             this.Close();
         }
+
+        private void tbmdp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                BtnConnecter_Click(sender, e);
+        }
     }
 }
