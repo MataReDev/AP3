@@ -11,14 +11,16 @@ namespace AP3_FormaFlix
     public partial class FormListeFormations : Corner
     {
         private BindingSource bS1;
-        public FormListeFormations()
+        string user;
+        public FormListeFormations(string user)
         {
             InitializeComponent();
-            this.roundedCorner();
+            this.user = user;
         }
-        public FormListeFormations(string Maj)
+        public FormListeFormations(string user, string Maj)
         {
             InitializeComponent();
+            this.user = user;
             if (Maj == "modifier")
             {
                 btn_modif_liste.Visible = false;
@@ -35,7 +37,7 @@ namespace AP3_FormaFlix
         private void FormListeFormations_Load(object sender, EventArgs e)
         {
             // instanciation du ModeleFormation VmodeleF
-            Controleur.initFormation();
+            Controleur.initUtilisateur();
             if (Controleur.VmodeleC.Connopen == false)
             {
                 MessageBox.Show("Erreur dans la connexion");
@@ -64,7 +66,7 @@ namespace AP3_FormaFlix
         private void BtnFermer_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormPrincipale FF = new FormPrincipale("");
+            FormPrincipale FF = new FormPrincipale(user);
             FF.Closed += (s, args) => this.Close();
             FF.Show();
         }

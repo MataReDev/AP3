@@ -51,7 +51,7 @@ namespace AP3_FormaFlix
         private void ListerToutesLesFormationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormListeFormations FF = new FormListeFormations();
+            FormListeFormations FF = new FormListeFormations(admin);
             FF.Closed += (s, args) => this.Close();
             FF.Show();
         }
@@ -65,7 +65,7 @@ namespace AP3_FormaFlix
         {
 
             this.Hide();
-            FormAjoutFormation FA = new FormAjoutFormation();
+            FormAjoutFormation FA = new FormAjoutFormation(admin);
             FA.Closed += (s, args) => this.Close();
             FA.Show();
         }
@@ -73,7 +73,7 @@ namespace AP3_FormaFlix
         private void gestionDesCommentairesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormGestionCommentaire FGC = new FormGestionCommentaire();
+            FormGestionCommentaire FGC = new FormGestionCommentaire(admin);
             FGC.Closed += (s, args) => this.Close();
             FGC.Show();
         }
@@ -81,16 +81,15 @@ namespace AP3_FormaFlix
         private void modiferUneFormationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormListeFormations FF = new FormListeFormations("modifier");
+            FormListeFormations FF = new FormListeFormations(admin,"modifier");
             FF.Closed += (s, args) => this.Close();
             FF.Show();
         }
 
         private void supprimerUneFormationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             this.Hide();
-            FormListeFormations FF = new FormListeFormations("supprimer");
+            FormListeFormations FF = new FormListeFormations(admin,"supprimer");
             FF.Closed += (s, args) => this.Close();
             FF.Show();
         }
@@ -98,18 +97,25 @@ namespace AP3_FormaFlix
         private void ajouterUtilisateurToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormAjoutUser FASU = new FormAjoutUser();
+            FormAjoutUser FASU = new FormAjoutUser(admin);
             FASU.Closed += (s, args) => this.Close();
             FASU.Show();
         }
 
         private void deconnexionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
             this.Hide();
             FormConnexion FC = new FormConnexion();
             FC.Closed += (s, args) => this.Close();
             FC.Show();
+        }
+
+        private void listerUtilisateurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormListeUser FLU = new FormListeUser(admin);
+            FLU.Closed += (s, args) => this.Close();
+            FLU.Show();
         }
     }
 }

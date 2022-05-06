@@ -17,16 +17,18 @@ namespace AP3_FormaFlix
     /// </summary>
     public partial class FormAjoutFormation : Corner
     {
-        public FormAjoutFormation()
+        string user;
+        public FormAjoutFormation(string user)
         {
             InitializeComponent();
             this.roundedCorner();
+            this.user = user;
         }
 
         private void BtnFermer_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormPrincipale FF = new FormPrincipale("");
+            FormPrincipale FF = new FormPrincipale(user);
             FF.Closed += (s, args) => this.Close();
             FF.Show();
         }
@@ -120,7 +122,6 @@ namespace AP3_FormaFlix
                             }
 
                         }
-
                         BtnAnnuler_Click(sender, e);
                     }
                 }

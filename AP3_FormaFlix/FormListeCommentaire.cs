@@ -17,10 +17,12 @@ namespace AP3_FormaFlix
     /// </summary>
     public partial class FormListeCommentaire : Corner
     {
-        public FormListeCommentaire()
+        string user;
+        public FormListeCommentaire(string user)
         {
             InitializeComponent();
             this.roundedCorner();
+            this.user = user;
         }
 
         private void FormListeCommentaire_Load(object sender, EventArgs e)
@@ -38,7 +40,7 @@ namespace AP3_FormaFlix
         private void btnListeComm_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormGestionCommentaire FGC = new FormGestionCommentaire();
+            FormGestionCommentaire FGC = new FormGestionCommentaire(user);
             FGC.Closed += (s, args) => this.Close();
             FGC.Show();
         }
@@ -47,7 +49,7 @@ namespace AP3_FormaFlix
         {
 
             this.Hide();
-            FormPrincipale FP = new FormPrincipale("");
+            FormPrincipale FP = new FormPrincipale(user);
             FP.Closed += (s, args) => this.Close();
             FP.Show();
         }

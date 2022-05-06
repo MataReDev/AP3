@@ -17,9 +17,11 @@ namespace AP3_FormaFlix
     /// </summary>
     public partial class FormAjoutUser : Form
     {
-        public FormAjoutUser()
+        string user;
+        public FormAjoutUser(string user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void FormAjoutSuperUser_Load(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace AP3_FormaFlix
         private void btnFermer_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormPrincipale FF = new FormPrincipale("");
+            FormPrincipale FF = new FormPrincipale(user);
             FF.Closed += (s, args) => this.Close();
             FF.Show();
         }

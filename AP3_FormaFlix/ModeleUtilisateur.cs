@@ -40,6 +40,14 @@ namespace AP3_FormaFlix
         public ModeleUtilisateur()
         {}
 
+        /// <summary>
+        /// Méthode qui récupère toutes les informations sur les formations
+        /// </summary>
+        public void lister_utilisateur()
+        {
+            Controleur.VmodeleC.charger("select NOM, PRENOM, EMAIL, superU from utilisateur;", Controleur.VmodeleC.DT[9]);
+        }
+
         public bool ajouterUtilisateur(string nom, string prenom, string mdp, string email, bool ouiNon)
         {
             try
