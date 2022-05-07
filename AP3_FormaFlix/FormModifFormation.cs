@@ -18,12 +18,14 @@ namespace AP3_FormaFlix
     public partial class FormModifFormation : Corner
     {
         private int index;
+        string user;
 
-        public FormModifFormation(int index)
+        public FormModifFormation(int index, string user)
         {
             InitializeComponent();
             this.roundedCorner();
             this.index = index;
+            this.user = user;
         }
 
         private void chargerComboBoxCompetences()
@@ -80,9 +82,9 @@ namespace AP3_FormaFlix
         private void btnFermer_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormPrincipale FF = new FormPrincipale("");
-            FF.Closed += (s, args) => this.Close();
-            FF.Show();
+            FormListeFormations FLF = new FormListeFormations(user);
+            FLF.Closed += (s, args) => this.Close();
+            FLF.Show();
         }
 
         private void lbCompetences_MouseDoubleClick(object sender, MouseEventArgs e)

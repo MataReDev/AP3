@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace AP3_FormaFlix
@@ -16,6 +17,19 @@ namespace AP3_FormaFlix
             InitializeComponent();
             this.roundedCorner();
             this.admin = admin;
+            menuStrip1.Renderer = new MiRenderizador();
+        }
+        private class MiRenderizador : ToolStripProfessionalRenderer
+        {
+            protected override void OnRenderMenuItemBackground(ToolStripItemRenderEventArgs e)
+            {
+                if (!e.Item.Selected) base.OnRenderMenuItemBackground(e);
+                else
+                {
+                    Rectangle rc = new Rectangle(Point.Empty, e.Item.Size);
+                    e.Graphics.FillRectangle(Brushes.Red, rc); // Choix couleur
+                }
+            }
         }
 
         private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -23,14 +37,6 @@ namespace AP3_FormaFlix
             Application.Exit();
         }
 
-        private void DeconnexionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Controleur.VmodeleC.sedeconnecter();
-            MessageBox.Show("Vous êtes déconnecté de la base de données");
-            gestionDesFormationsToolStripMenuItem.Enabled = false;
-            gestionDesCommentairesToolStripMenuItem.Enabled = false;
-            ajouterUtilisateurToolStripMenuItem.Enabled = false;
-        }
 
         private void ReconnecterToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -42,10 +48,12 @@ namespace AP3_FormaFlix
         private void FormPrincipale_Load(object sender, EventArgs e)
         {
             user.Text = admin;
-            if (Convert.ToInt32(Controleur.VmodeleC.DT[0].Rows[0][5]) == 1 )
-                ajouterUtilisateurToolStripMenuItem.Visible =true;
-            else
-                ajouterUtilisateurToolStripMenuItem.Visible =false;
+            if (Convert.ToInt32(Controleur.VmodeleC.DT[0].Rows[0][5]) == 1)
+            {
+                ajouterUtilisateurToolStripMenuItem.Visible = true;
+                connexionToolStripMenuItem.Visible = true;
+                listerUtilisateurToolStripMenuItem.Visible = true;
+            }
         }
 
         private void ListerToutesLesFormationsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,10 +112,7 @@ namespace AP3_FormaFlix
 
         private void deconnexionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormConnexion FC = new FormConnexion();
-            FC.Closed += (s, args) => this.Close();
-            FC.Show();
+
         }
 
         private void listerUtilisateurToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,6 +121,35 @@ namespace AP3_FormaFlix
             FormListeUser FLU = new FormListeUser(admin);
             FLU.Closed += (s, args) => this.Close();
             FLU.Show();
+        }
+
+        private void deconnexionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controleur.VmodeleC.sedeconnecter();
+            MessageBox.Show("Vous êtes déconnecté de la base de données");
+            gestionDesFormationsToolStripMenuItem.Enabled = false;
+            gestionDesCommentairesToolStripMenuItem.Enabled = false;
+            ajouterUtilisateurToolStripMenuItem.Enabled = false;
+        }
+
+        private void reconnecterToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormConnexion FC = new FormConnexion();
+            FC.Show();
+            this.Close();
+        }
+
+        private void deconnexionToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormConnexion FC = new FormConnexion();
+            FC.Closed += (s, args) => this.Close();
+            FC.Show();
+        }
+
+        private void connexionToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
         }
     }
 }

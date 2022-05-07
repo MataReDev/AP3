@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dgvCommATraiter = new System.Windows.Forms.DataGridView();
             this.btnFermer = new System.Windows.Forms.Button();
+            this.btn_valide_comm = new System.Windows.Forms.Button();
+            this.btn_non_valide_comm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListeCommValide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListeCommNonValide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommATraiter)).BeginInit();
@@ -72,12 +74,15 @@
             this.dgvListeCommValide.AllowDrop = true;
             this.dgvListeCommValide.AllowUserToAddRows = false;
             this.dgvListeCommValide.AllowUserToDeleteRows = false;
+            this.dgvListeCommValide.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListeCommValide.BackgroundColor = System.Drawing.Color.White;
             this.dgvListeCommValide.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvListeCommValide.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListeCommValide.Location = new System.Drawing.Point(56, 363);
             this.dgvListeCommValide.Name = "dgvListeCommValide";
             this.dgvListeCommValide.ReadOnly = true;
+            this.dgvListeCommValide.RowHeadersVisible = false;
+            this.dgvListeCommValide.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListeCommValide.Size = new System.Drawing.Size(879, 190);
             this.dgvListeCommValide.TabIndex = 30;
             // 
@@ -86,12 +91,15 @@
             this.dgvListeCommNonValide.AllowDrop = true;
             this.dgvListeCommNonValide.AllowUserToAddRows = false;
             this.dgvListeCommNonValide.AllowUserToDeleteRows = false;
+            this.dgvListeCommNonValide.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListeCommNonValide.BackgroundColor = System.Drawing.Color.White;
             this.dgvListeCommNonValide.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvListeCommNonValide.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListeCommNonValide.Location = new System.Drawing.Point(56, 604);
             this.dgvListeCommNonValide.Name = "dgvListeCommNonValide";
             this.dgvListeCommNonValide.ReadOnly = true;
+            this.dgvListeCommNonValide.RowHeadersVisible = false;
+            this.dgvListeCommNonValide.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListeCommNonValide.Size = new System.Drawing.Size(879, 193);
             this.dgvListeCommNonValide.TabIndex = 31;
             // 
@@ -133,12 +141,14 @@
             this.dgvCommATraiter.AllowDrop = true;
             this.dgvCommATraiter.AllowUserToAddRows = false;
             this.dgvCommATraiter.AllowUserToDeleteRows = false;
+            this.dgvCommATraiter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCommATraiter.BackgroundColor = System.Drawing.Color.White;
             this.dgvCommATraiter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCommATraiter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCommATraiter.Location = new System.Drawing.Point(56, 137);
             this.dgvCommATraiter.Name = "dgvCommATraiter";
             this.dgvCommATraiter.ReadOnly = true;
+            this.dgvCommATraiter.RowHeadersVisible = false;
             this.dgvCommATraiter.Size = new System.Drawing.Size(879, 190);
             this.dgvCommATraiter.TabIndex = 34;
             // 
@@ -147,7 +157,7 @@
             this.btnFermer.BackColor = System.Drawing.Color.Black;
             this.btnFermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFermer.ForeColor = System.Drawing.Color.White;
-            this.btnFermer.Location = new System.Drawing.Point(861, 12);
+            this.btnFermer.Location = new System.Drawing.Point(1048, 12);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(134, 47);
             this.btnFermer.TabIndex = 36;
@@ -155,12 +165,40 @@
             this.btnFermer.UseVisualStyleBackColor = false;
             this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
+            // btn_valide_comm
+            // 
+            this.btn_valide_comm.BackColor = System.Drawing.Color.Black;
+            this.btn_valide_comm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_valide_comm.ForeColor = System.Drawing.Color.White;
+            this.btn_valide_comm.Location = new System.Drawing.Point(984, 420);
+            this.btn_valide_comm.Name = "btn_valide_comm";
+            this.btn_valide_comm.Size = new System.Drawing.Size(134, 47);
+            this.btn_valide_comm.TabIndex = 37;
+            this.btn_valide_comm.Text = "REVOQUER";
+            this.btn_valide_comm.UseVisualStyleBackColor = false;
+            this.btn_valide_comm.Click += new System.EventHandler(this.btn_valide_comm_Click);
+            // 
+            // btn_non_valide_comm
+            // 
+            this.btn_non_valide_comm.BackColor = System.Drawing.Color.Black;
+            this.btn_non_valide_comm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_non_valide_comm.ForeColor = System.Drawing.Color.White;
+            this.btn_non_valide_comm.Location = new System.Drawing.Point(984, 668);
+            this.btn_non_valide_comm.Name = "btn_non_valide_comm";
+            this.btn_non_valide_comm.Size = new System.Drawing.Size(134, 47);
+            this.btn_non_valide_comm.TabIndex = 38;
+            this.btn_non_valide_comm.Text = "REVOQUER";
+            this.btn_non_valide_comm.UseVisualStyleBackColor = false;
+            this.btn_non_valide_comm.Click += new System.EventHandler(this.btn_non_valide_comm_Click);
+            // 
             // FormListeCommentaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1007, 835);
+            this.ClientSize = new System.Drawing.Size(1217, 835);
+            this.Controls.Add(this.btn_non_valide_comm);
+            this.Controls.Add(this.btn_valide_comm);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvCommATraiter);
@@ -195,5 +233,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvCommATraiter;
         private System.Windows.Forms.Button btnFermer;
+        private System.Windows.Forms.Button btn_valide_comm;
+        private System.Windows.Forms.Button btn_non_valide_comm;
     }
 }

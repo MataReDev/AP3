@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipale));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reconnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUtilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listerUtilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesFormationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,6 +39,9 @@
             this.modiferUneFormationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerUneFormationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesCommentairesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reconnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deconnexionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,11 +57,13 @@
             this.connexionToolStripMenuItem,
             this.gestionDesFormationsToolStripMenuItem,
             this.gestionDesCommentairesToolStripMenuItem,
+            this.bDDToolStripMenuItem,
             this.deconnexionToolStripMenuItem1,
             this.quitterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 3, 0, 3);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip1.Size = new System.Drawing.Size(937, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -69,32 +72,14 @@
             // 
             this.connexionToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.connexionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deconnexionToolStripMenuItem,
-            this.reconnecterToolStripMenuItem,
             this.ajouterUtilisateurToolStripMenuItem,
             this.listerUtilisateurToolStripMenuItem});
             this.connexionToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.connexionToolStripMenuItem.Name = "connexionToolStripMenuItem";
             this.connexionToolStripMenuItem.Size = new System.Drawing.Size(173, 19);
             this.connexionToolStripMenuItem.Text = "Gestion des utilisateurs";
-            // 
-            // deconnexionToolStripMenuItem
-            // 
-            this.deconnexionToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.deconnexionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
-            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.deconnexionToolStripMenuItem.Text = "Deconnexion";
-            this.deconnexionToolStripMenuItem.Click += new System.EventHandler(this.DeconnexionToolStripMenuItem_Click);
-            // 
-            // reconnecterToolStripMenuItem
-            // 
-            this.reconnecterToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.reconnecterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.reconnecterToolStripMenuItem.Name = "reconnecterToolStripMenuItem";
-            this.reconnecterToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.reconnecterToolStripMenuItem.Text = "Reconnecter";
-            this.reconnecterToolStripMenuItem.Click += new System.EventHandler(this.ReconnecterToolStripMenuItem_Click);
+            this.connexionToolStripMenuItem.Visible = false;
+            this.connexionToolStripMenuItem.DropDownOpened += new System.EventHandler(this.connexionToolStripMenuItem_DropDownOpened);
             // 
             // ajouterUtilisateurToolStripMenuItem
             // 
@@ -113,6 +98,7 @@
             this.listerUtilisateurToolStripMenuItem.Name = "listerUtilisateurToolStripMenuItem";
             this.listerUtilisateurToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.listerUtilisateurToolStripMenuItem.Text = "Lister Utilisateur";
+            this.listerUtilisateurToolStripMenuItem.Visible = false;
             this.listerUtilisateurToolStripMenuItem.Click += new System.EventHandler(this.listerUtilisateurToolStripMenuItem_Click);
             // 
             // gestionDesFormationsToolStripMenuItem
@@ -171,6 +157,35 @@
             this.gestionDesCommentairesToolStripMenuItem.Text = "Gestion des commentaires";
             this.gestionDesCommentairesToolStripMenuItem.Click += new System.EventHandler(this.gestionDesCommentairesToolStripMenuItem_Click);
             // 
+            // bDDToolStripMenuItem
+            // 
+            this.bDDToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.bDDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deconnexionToolStripMenuItem,
+            this.reconnecterToolStripMenuItem});
+            this.bDDToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.bDDToolStripMenuItem.Name = "bDDToolStripMenuItem";
+            this.bDDToolStripMenuItem.Size = new System.Drawing.Size(45, 19);
+            this.bDDToolStripMenuItem.Text = "BDD";
+            // 
+            // deconnexionToolStripMenuItem
+            // 
+            this.deconnexionToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.deconnexionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
+            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.deconnexionToolStripMenuItem.Text = "Deconnexion";
+            this.deconnexionToolStripMenuItem.Click += new System.EventHandler(this.deconnexionToolStripMenuItem_Click);
+            // 
+            // reconnecterToolStripMenuItem
+            // 
+            this.reconnecterToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.reconnecterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.reconnecterToolStripMenuItem.Name = "reconnecterToolStripMenuItem";
+            this.reconnecterToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.reconnecterToolStripMenuItem.Text = "Reconnecter";
+            this.reconnecterToolStripMenuItem.Click += new System.EventHandler(this.reconnecterToolStripMenuItem_Click_1);
+            // 
             // deconnexionToolStripMenuItem1
             // 
             this.deconnexionToolStripMenuItem1.BackColor = System.Drawing.Color.Transparent;
@@ -178,7 +193,7 @@
             this.deconnexionToolStripMenuItem1.Name = "deconnexionToolStripMenuItem1";
             this.deconnexionToolStripMenuItem1.Size = new System.Drawing.Size(103, 19);
             this.deconnexionToolStripMenuItem1.Text = "Deconnexion";
-            this.deconnexionToolStripMenuItem1.Click += new System.EventHandler(this.deconnexionToolStripMenuItem1_Click);
+            this.deconnexionToolStripMenuItem1.Click += new System.EventHandler(this.deconnexionToolStripMenuItem1_Click_1);
             // 
             // quitterToolStripMenuItem
             // 
@@ -243,12 +258,10 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem connexionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionDesFormationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listerToutesLesFormationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterUneFormationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reconnecterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionDesCommentairesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modiferUneFormationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerUneFormationToolStripMenuItem;
@@ -257,6 +270,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label user;
         private System.Windows.Forms.ToolStripMenuItem listerUtilisateurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bDDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reconnecterToolStripMenuItem;
     }
 }
 

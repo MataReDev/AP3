@@ -67,6 +67,10 @@ namespace AP3_FormaFlix
         {
             Controleur.VmodeleC.charger("select idComm, texteComm ,nominscrit, prenomInscrit FROM commentaire C INNER JOIN inscrit I ON C.codeInscrit = I.idInscrit WHERE etatComm = 1;", Controleur.VmodeleC.DT[8]);
         }
+        public void charger_CommentaireParNumero(int id)
+        {
+            Controleur.VmodeleC.charger("select idComm, texteComm ,nominscrit, prenomInscrit, etatComm FROM commentaire C INNER JOIN inscrit I ON C.codeInscrit = I.idInscrit WHERE idComm = '" + id + "' LIMIT 1;", Controleur.VmodeleC.DT[10]);
+        }
 
         /// <summary>
         /// Permet d'ajouter une formation à la table FORMATION avec les éléments du formulaire passés en paramètre

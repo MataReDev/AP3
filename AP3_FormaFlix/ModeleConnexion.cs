@@ -43,7 +43,7 @@ namespace AP3_FormaFlix
         public ModeleConnexion()
         {
             // instanciation des collections des Datatable et DataAdapter
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 15; i++)
             {
                 dT.Add(new DataTable());
             }

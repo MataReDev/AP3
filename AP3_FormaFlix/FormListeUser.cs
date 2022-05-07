@@ -25,7 +25,6 @@ namespace AP3_FormaFlix
         private void FormListeUser_Load(object sender, EventArgs e)
         {
             // instanciation du ModeleFormation VmodeleU
-            Controleur.initFormation();
             Controleur.initUtilisateur();
             if (Controleur.VmodeleC.Connopen == false)
             {

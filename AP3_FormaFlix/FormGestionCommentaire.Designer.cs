@@ -36,8 +36,8 @@ namespace AP3_FormaFlix
             this.btnValider = new System.Windows.Forms.Button();
             this.btnNePasValider = new System.Windows.Forms.Button();
             this.btnFermer = new System.Windows.Forms.Button();
-            this.lblRienATrraiter = new System.Windows.Forms.Label();
             this.btnListeComm = new System.Windows.Forms.Button();
+            this.lblRienATrraiter = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label8
@@ -125,18 +125,6 @@ namespace AP3_FormaFlix
             this.btnFermer.UseVisualStyleBackColor = false;
             this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
-            // lblRienATrraiter
-            // 
-            this.lblRienATrraiter.AutoSize = true;
-            this.lblRienATrraiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRienATrraiter.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRienATrraiter.Location = new System.Drawing.Point(197, 291);
-            this.lblRienATrraiter.Name = "lblRienATrraiter";
-            this.lblRienATrraiter.Size = new System.Drawing.Size(402, 25);
-            this.lblRienATrraiter.TabIndex = 26;
-            this.lblRienATrraiter.Text = "Vous n\'avez aucun commentaire à traiter";
-            this.lblRienATrraiter.Visible = false;
-            // 
             // btnListeComm
             // 
             this.btnListeComm.BackColor = System.Drawing.Color.Black;
@@ -150,13 +138,25 @@ namespace AP3_FormaFlix
             this.btnListeComm.UseVisualStyleBackColor = false;
             this.btnListeComm.Click += new System.EventHandler(this.btnListeComm_Click);
             // 
+            // lblRienATrraiter
+            // 
+            this.lblRienATrraiter.AutoSize = true;
+            this.lblRienATrraiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRienATrraiter.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRienATrraiter.Location = new System.Drawing.Point(197, 291);
+            this.lblRienATrraiter.Name = "lblRienATrraiter";
+            this.lblRienATrraiter.Size = new System.Drawing.Size(402, 25);
+            this.lblRienATrraiter.TabIndex = 26;
+            this.lblRienATrraiter.Text = "Vous n\'avez aucun commentaire à traiter";
+            this.lblRienATrraiter.Visible = false;
+            // 
             // FormGestionCommentaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 560);
+            this.ClientSize = new System.Drawing.Size(800, 561);
             this.ControlBox = false;
             this.Controls.Add(this.btnListeComm);
             this.Controls.Add(this.lblRienATrraiter);
@@ -188,7 +188,7 @@ namespace AP3_FormaFlix
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.Button btnNePasValider;
         private System.Windows.Forms.Button btnFermer;
-        private System.Windows.Forms.Label lblRienATrraiter;
         private System.Windows.Forms.Button btnListeComm;
+        private System.Windows.Forms.Label lblRienATrraiter;
     }
 }

@@ -142,6 +142,12 @@
     <Compile Include="FormAjoutSuperUser.Designer.cs">
       <DependentUpon>FormAjoutSuperUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChangeStatusCommentaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangeStatusCommentaire.Designer.cs">
+      <DependentUpon>FormChangeStatusCommentaire.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAjoutSuperUser.resx">
       <DependentUpon>FormAjoutSuperUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangeStatusCommentaire.resx">
+      <DependentUpon>FormChangeStatusCommentaire.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConnexion.resx">
       <DependentUpon>FormConnexion.cs</DependentUpon>

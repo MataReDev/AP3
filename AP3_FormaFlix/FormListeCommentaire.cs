@@ -47,11 +47,36 @@ namespace AP3_FormaFlix
 
         private void btnFermer_Click(object sender, EventArgs e)
         {
-
             this.Hide();
             FormPrincipale FP = new FormPrincipale(user);
             FP.Closed += (s, args) => this.Close();
             FP.Show();
+        }
+
+        private void btn_valide_comm_Click(object sender, EventArgs e)
+        {
+            if (dgvListeCommValide.SelectedRows.Count == 1)
+            {
+                this.Hide();
+                FormChangeStatusCommentaire FCSP = new FormChangeStatusCommentaire(user, Convert.ToInt32(dgvListeCommValide.SelectedRows[0].Cells[0].Value));
+                FCSP.Closed += (s, args) => this.Close();
+                FCSP.Show();
+            }
+            else
+                MessageBox.Show("Veuillez séléctionner un commentaire dans la liste des commentaires validé", "Erreur séléction");
+        }
+
+        private void btn_non_valide_comm_Click(object sender, EventArgs e)
+        {
+            if (dgvListeCommNonValide.SelectedRows.Count == 1)
+            {
+                this.Hide();
+                FormChangeStatusCommentaire FCSP = new FormChangeStatusCommentaire(user, Convert.ToInt32(dgvListeCommNonValide.SelectedRows[0].Cells[0].Value));
+                FCSP.Closed += (s, args) => this.Close();
+                FCSP.Show();
+            }
+            else
+                MessageBox.Show("Veuillez séléctionner un commentaire dans la liste des commentaires non validé", "Erreur séléction");
         }
     }
 }

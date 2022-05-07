@@ -39,6 +39,8 @@ namespace AP3_FormaFlix
             if (Controleur.VmodeleC.DT[5].Rows.Count == 0)
             {
                 lblRienATrraiter.Visible = true;
+                btnNePasValider.Visible = false;
+                btnValider.Visible = false;
             }
             else
             {
@@ -63,6 +65,7 @@ namespace AP3_FormaFlix
         {
             //Modifier l'étét du commentaire pour le mettre à non validé ( = 3 )
             Controleur.VmodeleF.ModifEtatCommentaire(Convert.ToInt32(Controleur.VmodeleC.DT[5].Rows[0][0]), 3);
+            MessageBox.Show("Le message a été passé à l'état de validé","Validé");
             FormGestionCommentaire_Load(sender, e);
         }
 
@@ -70,8 +73,8 @@ namespace AP3_FormaFlix
         {
             //Modifier l'étét du commentaire pour le mettre à  validé ( = 2 )
             Controleur.VmodeleF.ModifEtatCommentaire(Convert.ToInt32(Controleur.VmodeleC.DT[5].Rows[0][0]), 2);
+            MessageBox.Show("Le message a été passé à l'état de non validé", "Non Validé");
             FormGestionCommentaire_Load(sender, e);
-
         }
 
         private void btnListeComm_Click(object sender, EventArgs e)
@@ -81,5 +84,6 @@ namespace AP3_FormaFlix
             FLC.Closed += (s, args) => this.Close();
             FLC.Show();
         }
+
     }
 }

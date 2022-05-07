@@ -37,7 +37,7 @@ namespace AP3_FormaFlix
         private void FormListeFormations_Load(object sender, EventArgs e)
         {
             // instanciation du ModeleFormation VmodeleF
-            Controleur.initUtilisateur();
+            Controleur.initFormation();
             if (Controleur.VmodeleC.Connopen == false)
             {
                 MessageBox.Show("Erreur dans la connexion");
@@ -107,13 +107,17 @@ namespace AP3_FormaFlix
 
         private void btnModifForma_Click(object sender, EventArgs e)
         {
-            FormModifFormation FM = new FormModifFormation(Convert.ToInt32(dgvFormations.CurrentRow.Index));
+            this.Hide();
+            FormModifFormation FM = new FormModifFormation(Convert.ToInt32(dgvFormations.CurrentRow.Index), user);
+            FM.Closed += (s, args) => this.Close();
             FM.Show();
         }
 
         private void btn_modif_liste_Click(object sender, EventArgs e)
         {
-            FormModifFormation FM = new FormModifFormation(Convert.ToInt32(dgvFormations.CurrentRow.Index));
+            this.Hide();
+            FormModifFormation FM = new FormModifFormation(Convert.ToInt32(dgvFormations.CurrentRow.Index), user);
+            FM.Closed += (s, args) => this.Close();
             FM.Show();
         }
     }
