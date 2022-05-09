@@ -36,7 +36,7 @@ namespace AP3_FormaFlix
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.listeDesCompétencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_modif_liste = new System.Windows.Forms.Button();
-            this.btnsuppforma = new System.Windows.Forms.Button();
+            this.btnsupputilisateur = new System.Windows.Forms.Button();
             this.btnFermer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUtilisateurs)).BeginInit();
@@ -96,17 +96,18 @@ namespace AP3_FormaFlix
             this.btn_modif_liste.UseVisualStyleBackColor = false;
             this.btn_modif_liste.Click += new System.EventHandler(this.btn_modif_liste_Click);
             // 
-            // btnsuppforma
+            // btnsupputilisateur
             // 
-            this.btnsuppforma.BackColor = System.Drawing.Color.Black;
-            this.btnsuppforma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsuppforma.ForeColor = System.Drawing.Color.White;
-            this.btnsuppforma.Location = new System.Drawing.Point(671, 641);
-            this.btnsuppforma.Name = "btnsuppforma";
-            this.btnsuppforma.Size = new System.Drawing.Size(113, 39);
-            this.btnsuppforma.TabIndex = 14;
-            this.btnsuppforma.Text = "SUPPRIMER";
-            this.btnsuppforma.UseVisualStyleBackColor = false;
+            this.btnsupputilisateur.BackColor = System.Drawing.Color.Black;
+            this.btnsupputilisateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsupputilisateur.ForeColor = System.Drawing.Color.White;
+            this.btnsupputilisateur.Location = new System.Drawing.Point(671, 641);
+            this.btnsupputilisateur.Name = "btnsupputilisateur";
+            this.btnsupputilisateur.Size = new System.Drawing.Size(113, 39);
+            this.btnsupputilisateur.TabIndex = 14;
+            this.btnsupputilisateur.Text = "SUPPRIMER";
+            this.btnsupputilisateur.UseVisualStyleBackColor = false;
+            this.btnsupputilisateur.Click += new System.EventHandler(this.btnsupputilisateur_Click);
             // 
             // btnFermer
             // 
@@ -141,7 +142,7 @@ namespace AP3_FormaFlix
             this.ClientSize = new System.Drawing.Size(1375, 704);
             this.Controls.Add(this.dgvUtilisateurs);
             this.Controls.Add(this.btn_modif_liste);
-            this.Controls.Add(this.btnsuppforma);
+            this.Controls.Add(this.btnsupputilisateur);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -161,7 +162,7 @@ namespace AP3_FormaFlix
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem listeDesCompétencesToolStripMenuItem;
         private System.Windows.Forms.Button btn_modif_liste;
-        private System.Windows.Forms.Button btnsuppforma;
+        private System.Windows.Forms.Button btnsupputilisateur;
         private System.Windows.Forms.Button btnFermer;
         private System.Windows.Forms.Label label1;
     }

@@ -40,10 +40,11 @@ namespace AP3_FormaFlix
 
                     bS1.DataSource = Controleur.VmodeleC.DT[9];
                     dgvUtilisateurs.DataSource = bS1;
-                    dgvUtilisateurs.Columns[0].HeaderText = "NOM / ID";
-                    dgvUtilisateurs.Columns[1].HeaderText = "PRENOM";
-                    dgvUtilisateurs.Columns[2].HeaderText = "Email";
-                    dgvUtilisateurs.Columns[3].HeaderText = "Admin";
+                    dgvUtilisateurs.Columns[0].HeaderText = "ID ";
+                    dgvUtilisateurs.Columns[1].HeaderText = "NOM ";
+                    dgvUtilisateurs.Columns[2].HeaderText = "PRENOM";
+                    dgvUtilisateurs.Columns[3].HeaderText = "Email";
+                    dgvUtilisateurs.Columns[4].HeaderText = "Admin";
 
                     // mise à jour du dataGridView via le bindingSource rempli par le DataTable
                     dgvUtilisateurs.Refresh();
@@ -54,7 +55,10 @@ namespace AP3_FormaFlix
 
         private void btn_modif_liste_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormModifUtilisateur FMU = new FormModifUtilisateur(user, Convert.ToInt32(dgvUtilisateurs.SelectedRows[0].Cells[0].Value));
+            FMU.Closed += (s, args) => this.Close();
+            FMU.Show();
         }
 
         private void btnFermer_Click(object sender, EventArgs e)
@@ -63,7 +67,17 @@ namespace AP3_FormaFlix
             FormPrincipale FF = new FormPrincipale(user);
             FF.Closed += (s, args) => this.Close();
             FF.Show();
+        }
 
+        private void btnsupputilisateur_Click(object sender, EventArgs e)
+        {
+            if (Controleur.VmodeleU.supprimerUtilisateur(Convert.ToInt32(dgvUtilisateurs.SelectedRows[0].Cells[0].Value)))
+            {
+                MessageBox.Show("Utilisateur supprimé");
+                FormListeUser_Load(sender, e);
+            }
+            else
+                MessageBox.Show("Une erreur est survenue, l'utilisateur n'a pas été supprimé");
         }
     }
 }
