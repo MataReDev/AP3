@@ -10,14 +10,15 @@ using System.Windows.Forms;
 
 namespace AP3_FormaFlix
 {
-    public partial class FormChangeStatusCommentaire : Form
+    public partial class FormChangeStatusCommentaire : Corner
     {
         string user;
         int numeroCommentaire;
 
         public FormChangeStatusCommentaire(string user, int numeroCommentaire)
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            roundedCorner();
             this.user = user;
             this.numeroCommentaire = numeroCommentaire;
         }
@@ -47,9 +48,9 @@ namespace AP3_FormaFlix
 
         private void btnFermer_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             FormPrincipale FP = new FormPrincipale(user);
-            FP.Closed += (s, args) => this.Close();
+            FP.Closed += (s, args) => Close();
             FP.Show();
         }
 
@@ -71,9 +72,9 @@ namespace AP3_FormaFlix
 
         private void btnListeComm_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             FormListeCommentaire FLC = new FormListeCommentaire(user);
-            FLC.Closed += (s, args) => this.Close();
+            FLC.Closed += (s, args) => Close();
             FLC.Show();
         }
     }

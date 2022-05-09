@@ -79,7 +79,6 @@
             this.connexionToolStripMenuItem.Size = new System.Drawing.Size(173, 19);
             this.connexionToolStripMenuItem.Text = "Gestion des utilisateurs";
             this.connexionToolStripMenuItem.Visible = false;
-            this.connexionToolStripMenuItem.DropDownOpened += new System.EventHandler(this.connexionToolStripMenuItem_DropDownOpened);
             // 
             // ajouterUtilisateurToolStripMenuItem
             // 

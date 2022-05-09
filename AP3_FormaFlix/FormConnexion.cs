@@ -22,7 +22,7 @@ namespace AP3_FormaFlix
         public FormConnexion()
         {
             InitializeComponent();
-            this.roundedCorner();
+            roundedCorner();
         }        
 
         private void FormConnexion_Load(object sender, EventArgs e)

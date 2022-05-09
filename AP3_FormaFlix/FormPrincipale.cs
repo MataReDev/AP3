@@ -15,7 +15,7 @@ namespace AP3_FormaFlix
         public FormPrincipale(string admin)
         {
             InitializeComponent();
-            this.roundedCorner();
+            roundedCorner();
             this.admin = admin;
             menuStrip1.Renderer = new MiRenderizador();
         }
@@ -42,7 +42,7 @@ namespace AP3_FormaFlix
         {
             FormConnexion FC = new FormConnexion();
             FC.Show();
-            this.Close();
+            Close();
         }
 
         private void FormPrincipale_Load(object sender, EventArgs e)
@@ -58,9 +58,9 @@ namespace AP3_FormaFlix
 
         private void ListerToutesLesFormationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             FormListeFormations FF = new FormListeFormations(admin);
-            FF.Closed += (s, args) => this.Close();
+            FF.Closed += (s, args) => Close();
             FF.Show();
         }
 
@@ -72,57 +72,50 @@ namespace AP3_FormaFlix
         private void AjouterUneFormationToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
+            Hide();
             FormAjoutFormation FA = new FormAjoutFormation(admin);
-            FA.Closed += (s, args) => this.Close();
+            FA.Closed += (s, args) => Close();
             FA.Show();
         }
 
         private void gestionDesCommentairesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             FormGestionCommentaire FGC = new FormGestionCommentaire(admin);
-            FGC.Closed += (s, args) => this.Close();
+            FGC.Closed += (s, args) => Close();
             FGC.Show();
         }
 
         private void modiferUneFormationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             FormListeFormations FF = new FormListeFormations(admin,"modifier");
-            FF.Closed += (s, args) => this.Close();
+            FF.Closed += (s, args) => Close();
             FF.Show();
         }
 
         private void supprimerUneFormationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             FormListeFormations FF = new FormListeFormations(admin,"supprimer");
-            FF.Closed += (s, args) => this.Close();
+            FF.Closed += (s, args) => Close();
             FF.Show();
         }
 
         private void ajouterUtilisateurToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             FormAjoutUser FASU = new FormAjoutUser(admin);
-            FASU.Closed += (s, args) => this.Close();
+            FASU.Closed += (s, args) => Close();
             FASU.Show();
         }
-
-        private void deconnexionToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void listerUtilisateurToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             FormListeUser FLU = new FormListeUser(admin);
-            FLU.Closed += (s, args) => this.Close();
+            FLU.Closed += (s, args) => Close();
             FLU.Show();
         }
-
         private void deconnexionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Controleur.VmodeleC.sedeconnecter();
@@ -131,25 +124,18 @@ namespace AP3_FormaFlix
             gestionDesCommentairesToolStripMenuItem.Enabled = false;
             ajouterUtilisateurToolStripMenuItem.Enabled = false;
         }
-
         private void reconnecterToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             FormConnexion FC = new FormConnexion();
+            FC.Closed += (s, args) => Close();
             FC.Show();
-            this.Close();
         }
-
         private void deconnexionToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             FormConnexion FC = new FormConnexion();
-            FC.Closed += (s, args) => this.Close();
             FC.Show();
-        }
-
-        private void connexionToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
-        {
         }
     }
 }

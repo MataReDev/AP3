@@ -23,7 +23,7 @@ namespace AP3_FormaFlix
         public FormModifFormation(int index, string user)
         {
             InitializeComponent();
-            this.roundedCorner();
+            roundedCorner();
             this.index = index;
             this.user = user;
         }

@@ -15,6 +15,7 @@ namespace AP3_FormaFlix
         public FormListeFormations(string user)
         {
             InitializeComponent();
+            roundedCorner();
             this.user = user;
         }
         public FormListeFormations(string user, string Maj)

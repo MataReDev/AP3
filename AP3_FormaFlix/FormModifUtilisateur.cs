@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace AP3_FormaFlix
 {
-    public partial class FormModifUtilisateur : Form
+    public partial class FormModifUtilisateur : Corner
     {
         string user;
         int id;
         public FormModifUtilisateur(string user, int id)
         {
             InitializeComponent();
+            roundedCorner();
             this.user = user;
             this.id = id;
         }
@@ -41,9 +42,9 @@ namespace AP3_FormaFlix
                     if (Controleur.VmodeleU.modifierUtilisateur(id, tbNom.Text, tbPrenom.Text, tbEmail.Text, cbAdministrateur.Checked))
                     {
                         MessageBox.Show("Utilisateur modifié\nRetour à la liste des utilisateurs");
-                        this.Hide();
+                        Hide();
                         FormListeUser FLU = new FormListeUser(user);
-                        FLU.Closed += (s, args) => this.Close();
+                        FLU.Closed += (s, args) => Close();
                         FLU.Show();
                     }
                     else
@@ -73,9 +74,9 @@ namespace AP3_FormaFlix
             DialogResult result = MessageBox.Show("Vous allez quittez la modification sans enregistrer, êtes vous sur de ce choix ?", "Quitter sans enregistrer", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                this.Hide();
+                Hide();
                 FormListeUser FLU = new FormListeUser(user);
-                FLU.Closed += (s, args) => this.Close();
+                FLU.Closed += (s, args) => Close();
                 FLU.Show();
             }
         }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AP3_FormaFlix
 {
-    public partial class FormListeUser : Form
+    public partial class FormListeUser : Corner
     {
 
         private BindingSource bS1;
@@ -19,6 +19,7 @@ namespace AP3_FormaFlix
         public FormListeUser(string user)
         {
             InitializeComponent();
+            roundedCorner();
             this.user = user;
         }
 

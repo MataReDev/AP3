@@ -15,13 +15,14 @@ namespace AP3_FormaFlix
     /// Auteur : M.GOUDAL
     /// date : MAI 2022
     /// </summary>
-    public partial class FormAjoutUser : Form
+    public partial class FormAjoutUser : Corner
     {
         string user;
         public FormAjoutUser(string user)
         {
             InitializeComponent();
             this.user = user;
+            roundedCorner();
         }
 
         private void FormAjoutSuperUser_Load(object sender, EventArgs e)
@@ -36,9 +37,9 @@ namespace AP3_FormaFlix
 
         private void btnFermer_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             FormPrincipale FF = new FormPrincipale(user);
-            FF.Closed += (s, args) => this.Close();
+            FF.Closed += (s, args) => Close();
             FF.Show();
         }
         bool IsValidEmail(string email)

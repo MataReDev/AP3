@@ -21,7 +21,7 @@ namespace AP3_FormaFlix
         public FormAjoutFormation(string user)
         {
             InitializeComponent();
-            this.roundedCorner();
+            roundedCorner();
             this.user = user;
         }
 
